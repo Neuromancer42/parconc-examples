@@ -1,12 +1,12 @@
 # (c) Simon Marlow 2011, see the file LICENSE for copying terms.
 #
-# Sample code to accompany
+# Sample code to accompany 
 #   "Parallel and Concurrent Programming in Haskell"
 #
 # Requisites:
 #    - Haskell Platform
 #    - cabal install xml
-#    - for monad-par examples: cabal install monad-par
+#    - for monad-par examples: cabal install monad-par 
 #    - for remote examples: cabal install remote derive
 #
 # To build all samples, just type "make".
@@ -83,7 +83,7 @@ threadperf2_HC_OPTS = -with-rtsopts=-K32m
 
 all : $(SAMPLES)
 
-GHC = ghc
+GHC = ghc -package-conf $$HOME/ext/code/distributed-process/cabal-dev/packages-7.4.1.conf
 GHC_OPTS = -O2 -threaded -rtsopts -eventlog
 
 % : %.hs
@@ -205,9 +205,9 @@ test:
 
 .PHONY: chanbench
 chanbench:
-	$(GHC) -DCHAN    -O2 chanbench.hs -o chanbench-chan
-	$(GHC) -DTCHAN   -O2 chanbench.hs -o chanbench-tchan
-	$(GHC) -DTQUEUE  -O2 chanbench.hs -o chanbench-tqueue
+	$(GHC) -DCHAN    -O2 chanbench.hs -o chanbench-chan   
+	$(GHC) -DTCHAN   -O2 chanbench.hs -o chanbench-tchan  
+	$(GHC) -DTQUEUE  -O2 chanbench.hs -o chanbench-tqueue 
 	$(GHC) -DTBQUEUE -O2 chanbench.hs -o chanbench-tbqueue
 
 chanbench-run: chanbench
