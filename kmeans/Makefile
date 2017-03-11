@@ -1,4 +1,4 @@
-GHC = ghc
+GHC = stack ghc --
 GHC_OPTS = -O2 -threaded -rtsopts
 
 all : points.bin
@@ -15,4 +15,4 @@ points : GenSamples
 points.bin : points
 
 view : points
-	gnuplot -e 'set terminal png; plot "points"' >points.png; eog points.png    
+	gnuplot -e 'set terminal png; plot "points"' >points.png; eog points.png

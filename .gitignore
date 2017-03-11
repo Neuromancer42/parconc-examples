@@ -1,5 +1,7 @@
 *~
 
+*.swp
+
 *.o
 *.hi
 *.eventlog
@@ -49,6 +51,7 @@ index/docs
 kmeans/GenSamples
 kmeans/kmeans
 kmeans/kmeans-seq
+kmeans/points*
 logger
 mandel/mandel
 merge.hs
