@@ -52,6 +52,8 @@ kmeans/GenSamples
 kmeans/kmeans
 kmeans/kmeans-seq
 kmeans/points*
+kmeans/clusters
+kmeans/params
 logger
 mandel/mandel
 merge.hs
