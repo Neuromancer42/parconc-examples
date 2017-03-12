@@ -4,7 +4,7 @@ GHC_OPTS = -O2 -threaded -rtsopts
 all : points.bin
 
 kmeans : kmeans.hs KMeansCore.hs
-	$(GHC) $(GHC_OPTS) kmeans
+	$(GHC) $(GHC_OPTS) -eventlog kmeans
 
 GenSamples : GenSamples.hs KMeansCore.hs
 	$(GHC) $(GHC_OPTS) GenSamples
